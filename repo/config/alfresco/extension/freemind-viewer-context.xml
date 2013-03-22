@@ -22,8 +22,11 @@
       </property>
    </bean>
    
+  <bean id="transformer.freemind.txt"
+    class="freemind.transform.FreemindTransformer"
+    parent="baseContentTransformer" />
 
-<bean id="transformer.freemindToText" class="org.alfresco.repo.content.transform.RuntimeExecutableContentTransformerWorker">
+<!-- <bean id="transformer.freemindToText" class="org.alfresco.repo.content.transform.RuntimeExecutableContentTransformerWorker">
       <property name="mimetypeService">
          <ref bean="mimetypeService" />
       </property>
@@ -54,9 +57,9 @@
             <entry key=".*">
               <value>${mm-script} ${source} ${target}</value>
             </entry>
-           <!--  <entry key="Windows.*">
+            <entry key="Windows.*">
               <value>...whatever windows needs here....</value>
-            </entry> -->
+            </entry>
           </map>
         </property>
         <property name="defaultProperties">
@@ -75,5 +78,5 @@
          </list>
       </property>
 
-  </bean>
+  </bean> -->
 </beans>
